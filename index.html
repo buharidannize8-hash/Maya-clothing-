@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MAYA CLOTHING</title>
+  <meta
+    name="description"
+    content="MAYA CLOTHING — Premium streetwear and fashion."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="header">
+
+    <div class="header-inner">
+
+      <button class="menu-btn" id="menuBtn">
+        ☰
+      </button>
+
+      <a href="#" class="logo">
+        MAYA
+        <span>CLOTHING</span>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#new">New Arrivals</a>
+        <a href="#categories">Categories</a>
+      </nav>
+
+      <div class="header-actions">
+
+        <button id="searchBtn" class="icon-btn">
+          🔍
+        </button>
+
+        <button id="accountBtn" class="icon-btn">
+          👤
+        </button>
+
+        <button id="cartBtn" class="cart-btn">
+          🛒
+          <span id="cartCount">0</span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= MOBILE MENU ================= -->
+
+  <div class="mobile-menu" id="mobileMenu">
+
+    <button id="closeMenu" class="close-btn">
+      ×
+    </button>
+
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#new">New Arrivals</a>
+    <a href="#categories">Categories</a>
+
+  </div>
+
+
+  <!-- ================= SEARCH ================= -->
+
+  <div class="search-box" id="searchBox">
+
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search Maya Clothing..."
+    />
+
+    <button id="closeSearch">
+      ×
+    </button>
+
+  </div>
+
+
+  <!-- ================= HERO ================= -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="hero-content">
+
+        <p class="small-title">
+          MAYA CLOTHING
+        </p>
+
+        <h1>
+          WEAR YOUR
+          <span>IDENTITY.</span>
+        </h1>
+
+        <p>
+          Premium streetwear designed for people
+          who want to stand out.
+        </p>
+
+        <a href="#shop" class="primary-btn">
+          Shop Now
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="section" id="categories">
+
+      <div class="section-heading">
+
+        <div>
+          <p class="eyebrow">
+            EXPLORE
+          </p>
+
+          <h2>
+            Shop Categories
+          </h2>
+        </div>
+
+      </div>
+
+      <div class="category-grid">
+
+        <button class="category-card" data-category="T-Shirts">
+          <div class="category-image tshirt">
+            👕
+          </div>
+
+          <h3>T-Shirts</h3>
+        </button>
+
+        <button class="category-card" data-category="Hoodies">
+          <div class="category-image hoodie">
+            🧥
+          </div>
+
+          <h3>Hoodies</h3>
+        </button>
+
+        <button class="category-card" data-category="Trousers">
+          <div class="category-image trousers">
+            👖
+          </div>
+
+          <h3>Trousers</h3>
+        </button>
+
+        <button class="category-card" data-category="Accessories">
+          <div class="category-image accessories">
+            🧢
+          </div>
+
+          <h3>Accessories</h3>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="section" id="shop">
+
+      <div class="section-heading">
+
+        <div>
+          <p class="eyebrow">
+            MAYA STORE
+          </p>
+
+          <h2>
+            Featured Products
+          </h2>
+        </div>
+
+        <button class="text-btn" id="clearFilter">
+          View All
+        </button>
+
+      </div>
+
+      <div id="products" class="product-grid">
+
+        <div class="loading">
+          Loading products...
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= NEW ARRIVALS ================= -->
+
+    <section class="new-section" id="new">
+
+      <div>
+
+        <p class="eyebrow">
+          NEW DROP
+        </p>
+
+        <h2>
+          Fresh pieces.<br>
+          New energy.
+        </h2>
+
+        <p>
+          Discover the latest Maya Clothing collection.
+        </p>
+
+        <a href="#shop" class="primary-btn">
+          Explore Collection
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= NEWSLETTER ================= -->
+
+    <section class="newsletter">
+
+      <h2>
+        Join the Maya family.
+      </h2>
+
+      <p>
+        Get updates about new drops and exclusive releases.
+      </p>
+
+      <form id="newsletterForm">
+
+        <input
+          type="email"
+          id="newsletterEmail"
+          placeholder="Your email address"
+          required
+        />
+
+        <button type="submit">
+          Join
+        </button>
+
+      </form>
+
+      <p id="newsletterMessage"></p>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= CART ================= -->
+
+  <aside class="cart-drawer" id="cartDrawer">
+
+    <div class="cart-header">
+
+      <h2>
+        Your Cart
+      </h2>
+
+      <button id="closeCart">
+        ×
+      </button>
+
+    </div>
+
+    <div id="cartItems" class="cart-items">
+    </div>
+
+    <div class="cart-footer">
+
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">
+          ₦0
+        </strong>
+      </div>
+
+      <button id="checkoutBtn" class="checkout-btn">
+        Checkout
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- ================= OVERLAY ================= -->
+
+  <div class="overlay" id="overlay"></div>
+
+
+  <!-- ================= AUTH MODAL ================= -->
+
+  <div class="modal" id="authModal">
+
+    <div class="modal-content">
+
+      <button class="modal-close" id="closeAuth">
+        ×
+      </button>
+
+      <div id="authLoggedOut">
+
+        <h2>
+          Welcome to Maya
+        </h2>
+
+        <p>
+          Login or create your account.
+        </p>
+
+        <form id="authForm">
+
+          <input
+            type="email"
+            id="authEmail"
+            placeholder="Email"
+            required
+          />
+
+          <input
+            type="password"
+            id="authPassword"
+            placeholder="Password"
+            minlength="6"
+            required
+          />
+
+          <button type="submit" class="primary-btn">
+            Login
+          </button>
+
+        </form>
+
+        <button id="signupBtn" class="secondary-btn">
+          Create Account
+        </button>
+
+        <p id="authMessage"></p>
+
+      </div>
+
+
+      <div id="authLoggedIn" class="hidden">
+
+        <h2>
+          My Maya Account
+        </h2>
+
+        <p id="userEmail"></p>
+
+        <button id="logoutBtn" class="secondary-btn">
+          Logout
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= TOAST ================= -->
+
+  <div id="toast" class="toast">
+  </div>
+
+
+  <script type="module" src="app.js"></script>
+
+</body>
+</html>
